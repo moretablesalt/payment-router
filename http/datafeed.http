@@ -1,0 +1,19 @@
+POST http://localhost:8080/payment/datafeed
+Content-Type: application/x-www-form-urlencoded
+
+Ref=OFW123415&
+Amt=5968.00&
+Cur=608&
+successcode=0&
+MerchantId=18155972&
+PayRef=36380637&
+payMethod=Master&
+Ord=300615823990&
+secureHash=testhash
+
+
+###
+POST http://localhost:8080/payment/datafeed
+Content-Type: application/x-www-form-urlencoded
+
+prc=0&src=0&Ord=300615823990&Ref=PA-011062023-0000000019&PayRef=36380637&successcode=0&Amt=5968.00&Cur=608&Holder=Marites+Viernes&AuthId=952688&AlertCode=&remark=&eci=02&payerAuth=Y&sourceIp=49.180.178.125&ipCountry=AU&payMethod=Master&TxTime=2023-01-06+12%3A34%3A42.0&panFirst4=5217&panLast4=3379&cardIssuingCountry=AU&channelType=SPC&MerchantId=18155972&secureHash=7977c48c02d2d669d12a69aed9b2e9dd89bbffe8

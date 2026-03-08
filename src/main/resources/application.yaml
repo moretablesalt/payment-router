@@ -20,3 +20,9 @@ spring:
 
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.yml
+
+backend:
+  travel:
+    url: http://localhost:8081/webhook/payment
+  ofw:
+    url: http://localhost:8081/webhook/payment/datafeed

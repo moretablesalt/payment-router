@@ -1,0 +1,24 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 002-datafeed-indexes
+      author: Mark Tiu
+      changes:
+        - addUniqueConstraint:
+            tableName: datafeed_event
+            columnNames: reference_no
+            constraintName: uq_datafeed_reference
+
+        - createIndex:
+            tableName: datafeed_event
+            indexName: idx_datafeed_status
+            columns:
+              - column:
+                  name: status
+
+        - createIndex:
+            tableName: datafeed_event
+            indexName: idx_datafeed_received
+            columns:
+              - column:
+                  name: received_at

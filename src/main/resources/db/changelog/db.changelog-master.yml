@@ -1,0 +1,6 @@
+databaseChangeLog:
+
+  - include:
+      file: db/changelog/001-create-datafeed-event.yml
+  - include:
+      file: db/changelog/002-datafeed-indexes.yml

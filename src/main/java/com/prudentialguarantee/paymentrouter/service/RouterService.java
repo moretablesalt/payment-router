@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class RouterService {
     private final DatafeedEventRepository repository;
+    private final ForwardService forwardService;
 
     public void saveEvent(MultiValueMap<String,String> formData) {
 
@@ -40,7 +41,11 @@ public class RouterService {
         event.setReceivedAt(Instant.now());
 
         repository.save(event);
+
+        forwardService.forward(event);
     }
+
+
     private String buildRawPayload(MultiValueMap<String,String> formData) {
 
         return formData.entrySet()
@@ -65,7 +70,7 @@ public class RouterService {
             return "UNKNOWN";
         }
 
-        if (ref.startsWith("TRV")) {
+        if (ref.startsWith("PA")) {
             return "TRAVEL";
         }
 

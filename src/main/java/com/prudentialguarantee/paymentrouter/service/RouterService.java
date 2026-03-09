@@ -69,14 +69,14 @@ public class RouterService {
             return "UNKNOWN";
         }
 
-        if (ref.startsWith("PA")) {
-            return "TRAVEL";
-        }
-
         if (ref.startsWith("OFW")) {
             return "OFW";
         }
 
-        return "UNKNOWN";
+        if (ref.startsWith("PA")) {
+            return "TRAVEL";
+        }
+
+        return "TRAVEL";
     }
 }

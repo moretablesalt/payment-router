@@ -14,7 +14,6 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class RouterService {
     private final DatafeedEventRepository repository;
-    private final ForwardService forwardService;
 
     public void saveEvent(MultiValueMap<String,String> formData) {
 

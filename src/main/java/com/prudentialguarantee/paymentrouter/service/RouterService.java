@@ -42,7 +42,6 @@ public class RouterService {
 
         repository.save(event);
 
-        forwardService.forward(event);
     }
 
 
